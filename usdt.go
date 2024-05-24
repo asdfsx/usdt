@@ -64,7 +64,7 @@ func New(prog *ebpf.Program, provider, probe string, pid int) (*USDT, error) {
 	sym := fmt.Sprintf("usdt_%s_%s", provider, probe)
 	opts := &link.UprobeOptions{
 		PID:    pid,
-		Offset: note.locationOffset,
+		Address: note.locationOffset,
 		// Kernel 4.20+.
 		RefCtrOffset: note.semaphoreOffsetKernel,
 	}
