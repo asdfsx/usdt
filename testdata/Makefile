@@ -1,4 +1,4 @@
-CLANG ?= clang-12
+CLANG ?= clang-17
 CFLAGS := -O2 -Wall -Werror
 
 all: clean simple semaphore lint
